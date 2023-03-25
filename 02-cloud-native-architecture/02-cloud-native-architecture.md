@@ -59,39 +59,57 @@ Application architecture in a cloud native world
 * Cloud Native Communities are groups of individuals who work together to build and promote vendor-neutral cloud native
   technologies, standards and techniques
 * One example of Cloud Native communities is the [Cloud Native Computing Foundation (CNCF)](https://www.cncf.io/)
-    * founded in 2015
+    * is a project within the linux foundation founded in 2015
     * one of the largest communities (> 153k contributors)
     * manages some of the most widely used projects such as Kubernetes, Prometheus or Envoy
     * defines three stages of project maturity
         * sandbox
+          * project in a very early stage which has significant community involvement
+          * adopted because it offers unrealized potential
+          * receives minimal funding
+          * will be removed within 12 months if
         * incubating
+          * project will become incubated if it shows growth and maturity
+          * at least three companies use it in production
+          * accept regular contributions from the community
         * graduated
-* CNCF Governance
+          * can be voted by the Technical Oversight Commitee (TOC)
+          * have shown their adoption in the past
+          * have committers from at least two big companies
+          * meet the Linux Foundation best practices
+* CNCF minimal viable governance
     * Governing board
     * The [Technical Oversight Committee (TOC)](https://www.cncf.io/people/technical-oversight-committee/)
         * provides technical leadership to the cloud native community
-        * admits new open-source projects to the CNCF
+        * approves new open-source projects
         * aligning projects and removing or archiving projects
+        * defines common practices
+        * maintains the technical vision
     * Decisions are made through **public discussions and voting**
 * CNCF Community
     * End User Community provides feedback from users
     * Special Interest Groups (SIG) oversee and coordinate needs for specific domains or technologies
     * Work groups
 
-## Roles and Personas
+## Job Roles and Personas
 
 * roles that interact with cloud native technology in different ways
 * not necessarily individuals or positions, but roles fulfilled with respect to the cloud landscape
 
-### Developers
+### Cloud Architect
 
-* writes application code
-* ensures code works as expected
+* designs the cloud architecture
 
-### Ops
+### DevOps Engineer
 
 * builds and maintains the infrastructure that runs the code
 * deploys the code
+
+### Full Stack Developer
+
+* writes application code
+* ensures code works as expected
+* takes care of the entire stack
 
 ### Site Reliability Engineer (SRE)
 
@@ -103,18 +121,36 @@ Application architecture in a cloud native world
 * develops and maintains security standards
 * ensures application and infrastructure comply with technology and governmental standards
 
+### Data Engineer
+
+* manages large amounts of data in cloud environments
+
+### DevSecOps Engineer
+
+* responsible for the application lifecycle including security
+
 ## Open Standards
 
 * a technology specification open to public adoption
+* open standards guarantee interoperability and are common in cloud native
+* based on open source technology to prevent vendor lock-in
 * document that describes..
 * technologies that support the same open standard can work together more easily
 * Open Container Initiative (OCI)
-    * Organization that creates open standards for container formats and runtimes
-    * Image-spec is an OCI open standard for container image formats
-    * Runtime-spec is an OCI open standard for container runtimes
-    * The reference implementation for the OCI runtime-spec is **runc**
-* Examples of open standards
-    * HTML
-    * XML
-    * OCI runtime-spec and image-spec
+    * Linux Foundation project started by Docker in 2015
+    * creates open standards for container formats and runtimes
+* examples of open standards
+    * Containers are the standard for packaging applications
+    * Image-spec is an OCI open standard which defines how to build and package container images
+    * Runtime-spec is an OCI open standard to define how to run a container
     * Kubernetes Service Mesh Interface (SMI)
+    * Container Network interface (CNI) specifies how to implement network for containers
+    * Container Runtime Interface (CRI) defines how to implement container runtimes in orchestration systems
+    * Container Storage Interface (CSI) specifies how to implement storage in containers
+    * Service Mesh Interface (SMI) defines how to implement service mesh in orchestration systems
+    * Hypertext Markup Language (HTML)
+    * Extensible Markup Language (XML)
+
+## Links
+
+* https://aws.amazon.com/what-is/cloud-native/
